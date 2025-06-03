@@ -111,6 +111,29 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script>
+    const toggle = document.getElementById("batman-toggle");
+    const icon = document.getElementById("batman-icon");
+    const pic1 = document.getElementById("profile-pic1");
+    const pic2 = document.getElementById("profile-pic2");
+    const pic3 = document.getElementById("profile-pic3");
+
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("batman-mode");
+
+      icon.src = "assets/icons/icons8-batman-48.png";
+
+      if (document.body.classList.contains("batman-mode")) {
+        pic1.src = "assets/img/mask-face.png";
+        pic2.src = "assets/img/robin-mask.png";
+        pic3.src = "assets/img/pinguim.png";
+      } else {
+        pic1.src = "assets/img/integrante3.jpg";
+        pic2.src = "assets/img/integrante2.jpg";
+        pic3.src = "assets/img/integrante1.jpg";
+      }
+    });
+  </script>
 </body>
 
 </html>
