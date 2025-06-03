@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     popupMessage.textContent = mensagem;
     popup.classList.remove('hidden');
   }
+  
 });
 
 document.addEventListener('DOMContentLoaded', function () {
