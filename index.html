@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chuva+Alerta</title>
+  <title>Home</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -26,7 +26,7 @@
     <section class="hero">
       <h2>🌧️ Enchentes? A gente te orienta.</h2>
       <p>Confira rotas seguras, locais de apoio e dicas essenciais para se proteger em dias de chuva intensa.</p>
-      <button onclick="location.href='solucao.html'">Ver Solução</button>
+      <button class="btn" onclick="location.href='solucao.html'">Ver Solução</button>
     </section>
 
     <section class="cards">
@@ -64,11 +64,69 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Chuva+Alerta. Projeto desenvolvido para a Global Solution FIAP.</p>
+  <div class="bats-container">
+    <img src="assets/img/icons8-bat-48.png" class="bat bat1" alt="morcego">
+    <img src="assets/img/icons8-bat-48.png" class="bat bat2" alt="morcego">
+    <img src="assets/img/icons8-bat-48.png" class="bat bat3" alt="morcego">
+    <img src="assets/img/icons8-bat-48.png" class="bat bat4" alt="morcego">
+    <img src="assets/img/icons8-bat-48.png" class="bat bat5" alt="morcego">
+    <img src="assets/img/icons8-bat-48.png" class="bat bat6" alt="morcego">
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <h3>Prevents</h3>
+          <p>Projeto acadêmico para prevenção e conscientização sobre desastres naturais, como enchentes e chuvas
+            intensas.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Links Úteis</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Redes</h4>
+          <p>
+            <a href="https://github.com/thomasmfontes/Global-Solution" target="_blank">
+              <img src="assets/icons/github.svg" alt="GitHub" width="20">GitHub
+            </a>
+          </p>
+          <button id="batman-toggle">
+            <img id="batman-icon" src="assets/icons/icons8-batman-48.png" alt="Modo Batman" height="24">
+          </button>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Prevents. Projeto desenvolvido para a <strong>Global Solution FIAP</strong>.</p>
+      </div>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>
+  <script>
+    const toggle = document.getElementById("batman-toggle");
+    const icon = document.getElementById("batman-icon");
+
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("batman-mode");
+
+      icon.src = document.body.classList.contains("batman-mode")
+        ? "assets/icons/icons8-batman-48.png"
+        : "assets/icons/icons8-batman-48.png";
+    });
+  </script>
+
 </body>
 
 </html>
