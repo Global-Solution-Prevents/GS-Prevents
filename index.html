@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">Prevents</a>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false"></button>
+      <ul class="nav-list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>🌧️Alerta de enchente? A gente te guia com segurança!</h2>
+      <p>Encontre rotas seguras, locais de apoio e alertas em tempo real para agir com rapidez em dias de risco.</p>
+      <!--Usa verbos de ação ("agir", "encontrar"), e “em tempo real” reforça a inteligência da solução.-->
+      <button class="btn" onclick="location.href='solucao.html'">Ver Solução</button>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <h3>🧭 Rotas Seguras</h3>
+        <p>Veja rotas alternativas e ruas bloqueadas perto de você para fugir do risco com segurança.</p>
+      </div>
+      <div class="card">
+        <h3>🆘 Centros de Apoio</h3>
+        <p>Descubra os abrigos, hospitais e locais de ajuda mais próximos da sua localização.</p>
+      </div>
+      <div class="card">
+        <h3>📢 Alertas Ativos</h3>
+        <p>Fique por dentro dos alertas mais recentes da Defesa Civil e saiba quando agir.</p>
+      </div>
+      <div class="card">
+        <h3>🧰 Kit de Emergência</h3>
+        <p>Monte seu kit com tudo que você vai precisar em emergências.</p>
+      </div>
+    </section>
+
+    <section class="destaques">
+      <div class="destaque-item">
+        <h3>⛈️ +120</h3>
+        <p>Mais de 120 alertas enviados em 2025 para proteger moradores em áreas de risco.</p>
+      </div>
+      <div class="destaque-item">
+        <h3>🌊 18 bairros</h3>
+        <p>18 regiões monitoradas com histórico e risco ativo de alagamentos.</p>
+      </div>
+      <div class="destaque-item">
+        <h3>🚨 24h</h3>
+        <p>Vigilância meteorológica 24h para alertas em tempo real.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="bats-container">
+    <img src="assets/img/icon-bat.png" class="bat bat1" alt="morcego">
+    <img src="assets/img/icon-bat.png" class="bat bat2" alt="morcego">
+    <img src="assets/img/icon-bat.png" class="bat bat3" alt="morcego">
+    <img src="assets/img/icon-bat.png" class="bat bat4" alt="morcego">
+    <img src="assets/img/icon-bat.png" class="bat bat5" alt="morcego">
+    <img src="assets/img/icon-bat.png" class="bat bat6" alt="morcego">
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <h3>Prevents</h3>
+          <p>A tecnologia certa para prever enchentes, salvar vidas e reduzir prejuízos — tudo em um único projeto.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Links Úteis</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Redes</h4>
+          <p>
+            <a href="https://github.com/thomasmfontes/Global-Solution" target="_blank">
+              <img src="assets/icons/github.svg" alt="GitHub" width="20">GitHub
+            </a>
+          </p>
+          <button id="batman-toggle">
+            <img id="batman-icon" src="assets/icons/icon-batman.png" alt="Modo Batman" height="24">
+          </button>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Prevents. Projeto desenvolvido para a <strong>Global Solution FIAP</strong>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    const toggle = document.getElementById("batman-toggle");
+    const icon = document.getElementById("batman-icon");
+
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("batman-mode");
+
+      icon.src = document.body.classList.contains("batman-mode")
+        ? "assets/icons/icon-batman.png"
+        : "assets/icons/icon-batman.png";
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">Prevents</a>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false"></button>
+      <ul class="nav-list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <h2>📬 Contato</h2>
+      <p>Envie dúvidas, sugestões ou alertas para nossa equipe.</p>
+    </section>
+    <section>
+      <form id="contatoForm">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div id="popup" class="popup hidden">
+        <div class="popup-content">
+          <p id="popup-message"></p>
+          <button onclick="fecharPopup()">OK</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <h3>Prevents</h3>
+          <p>A tecnologia certa para prever enchentes, salvar vidas e reduzir prejuízos — tudo em um único projeto.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Links Úteis</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Redes</h4>
+          <p>
+            <a href="https://github.com/thomasmfontes/Global-Solution" target="_blank">
+              <img src="assets/icons/github.svg" alt="GitHub" width="20">GitHub
+            </a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Prevents. Projeto desenvolvido para a <strong>Global Solution FIAP</strong>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

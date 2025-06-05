@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integrantes</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">Prevents</a>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false"></button>
+      <ul class="nav-list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <h2>👥 Equipe</h2>
+      <p>Conheça os integrantes do projeto Prevents</p>
+    </section>
+    <section class="cards">
+      <div class="card">
+        <img src="assets/img/integrante1.jpg" alt="Foto de Gabriel Maciel" class="profile-pic" id="profile-pic3" />
+        <h3>Gabriel Maciel</h3>
+        <p>RM: 562795<br>Turma: 1TDSR</p>
+        <p>
+          <a href="https://github.com/gabriel-maciel06" target="_blank">GitHub</a> |
+          <a href="https://www.linkedin.com/in/matheus-molina-4578392b6" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/integrante2.jpg" alt="Foto de Matheus Molina" class="profile-pic" id="profile-pic2" />
+        <h3>Matheus Molina</h3>
+        <p>RM: 563399<br>Turma: 1TDSR</p>
+        <p>
+          <a href="https://github.com/matheus-molina" target="_blank">GitHub</a> |
+          <a href="https://www.linkedin.com/in/gabriel-maciel-alves-de-oliveira-8186312a6" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/integrante3.jpg" alt="Foto de Thomas Fontes" class="profile-pic" id="profile-pic1" />
+        <h3>Thomas Fontes</h3>
+        <p>RM: 562254<br>Turma: 1TDSR</p>
+        <p>
+          <a href="https://github.com/thomasmfontes" target="_blank">GitHub</a> |
+          <a href="https://www.linkedin.com/in/thomas-mineu-fontes-8406b2220" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="bats-container">
+    <img src="assets/img/icon-bat.png" class="bat bat1" alt="morcego">
+    <img src="assets/img/icon-bat.png" class="bat bat2" alt="morcego">
+    <img src="assets/img/icon-bat.png" class="bat bat3" alt="morcego">
+    <img src="assets/img/icon-bat.png" class="bat bat4" alt="morcego">
+    <img src="assets/img/icon-bat.png" class="bat bat5" alt="morcego">
+    <img src="assets/img/icon-bat.png" class="bat bat6" alt="morcego">
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <h3>Prevents</h3>
+          <p>A tecnologia certa para prever enchentes, salvar vidas e reduzir prejuízos — tudo em um único projeto.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Links Úteis</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Redes</h4>
+          <p>
+            <a href="https://github.com/thomasmfontes/Global-Solution" target="_blank">
+              <img src="assets/icons/github.svg" alt="GitHub" width="20">GitHub
+            </a>
+          </p>
+          <button id="batman-toggle">
+            <img id="batman-icon" src="assets/icons/icon-batman.png" alt="Modo Batman" height="24">
+          </button>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Prevents. Projeto desenvolvido para a <strong>Global Solution FIAP</strong>.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+  <script>
+    const toggle = document.getElementById("batman-toggle");
+    const icon = document.getElementById("batman-icon");
+    const pic1 = document.getElementById("profile-pic1");
+    const pic2 = document.getElementById("profile-pic2");
+    const pic3 = document.getElementById("profile-pic3");
+
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("batman-mode");
+
+      icon.src = "assets/icons/icon-batman.png";
+
+      if (document.body.classList.contains("batman-mode")) {
+        pic1.src = "assets/img/batman-mask.png";
+        pic2.src = "assets/img/robin-mask.png";
+        pic3.src = "assets/img/pinguim.png";
+      } else {
+        pic1.src = "assets/img/integrante3.jpg";
+        pic2.src = "assets/img/integrante2.jpg";
+        pic3.src = "assets/img/integrante1.jpg";
+      }
+    });
+  </script>
+</body>
+
+</html>
